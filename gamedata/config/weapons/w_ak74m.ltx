@@ -1,5 +1,5 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-[wpn_ak74]:identity_immunities
+[wpn_ak74m]:identity_immunities
 GroupControlSection		= spawn_group
 discovery_dependency	= 
 $spawn              	= "weapons\ak-74"	; name and section in level editor
@@ -10,7 +10,7 @@ cform               	= skeleton
 class               	= WP_AK74			; class of the weapon that corresponding to CPP class
 min_radius          	= 30				; [] for AI
 max_radius          	= 100				; [] for AI
-description				= enc_weapons1_wpn_ak74
+description				= enc_weapons1_wpn_ak74m
 	
 ef_main_weapon_type		= 2
 ef_weapon_type			= 6
@@ -20,7 +20,7 @@ holder_range_modifier	= 1.0		       ; во сколько раз увеличиваетс€ eye_range
 holder_fov_modifier		= 0.7              ; во сколько раз увеличиваетс€ eye_fov
 ;-----------------------------------------------------------------------------------
 
-cost					= 300000				; цена оружи€ в дерев€нных стольниках
+cost					= 500000				; цена оружи€ в дерев€нных стольниках
 weapon_class			= assault_rifle		; the type of the box that will be used in buy-menu in multiplayer mode	
 	
 ammo_limit				= 210				; obsolete
@@ -39,8 +39,8 @@ single_handed			= 0
 slot 					= 2									; number of slot in inventory we put weapon in (1 - knife slot, 2 - pistol, 3 - rifle, 4 - grenade, 5 - apparatus)
 animation_slot			= 2									; type of the animation that will be used
 
-inv_name	        	= wpn_ak74							; name in inventory	
-inv_name_short			= wpn_ak74
+inv_name	        	= wpn_ak74m							; name in inventory	
+inv_name_short			= wpn_ak74m
 inv_weight			= 3.3								; weight in inventory
 
 inv_grid_width			= 5	 ; position and size of the icon that will be used to display weapon in the inventory menu
@@ -72,7 +72,7 @@ control_inertion_factor			= 1.25f
 
 ;отдача
 cam_relax_speed         		=5;3.5; 0.15		;скорость возврата в исходное положение
-cam_dispersion          		= 0.15		;увеличени€ угла (в градусах) с каждым выстрелом
+cam_dispersion          		= 0.12		;увеличени€ угла (в градусах) с каждым выстрелом
 cam_dispersion_inc			= 0.3		;увеличениe cam_dispersion с каждым выстрелом
 cam_dispertion_frac			= 0.9		;ствол будет подыматьс€ на cam_dispersion*cam_dispertion_frac +- cam_dispersion*(1-cam_dispertion_frac)
 cam_max_angle				= 10.0	    	;максимальный угол отдачи
@@ -102,12 +102,12 @@ PDM_crouch	 				= 1.0
 PDM_crouch_no_acc 			= 1.0
 
 ; ttc
-hit_power                	= 100		; урон при попадании
-hit_impulse		 			= 140		; отбрасывание тела при попадании	
-hit_type 					= fire_wound 	; [] тип повреждени€
+hit_power                	= 100		; size of damage by bullet
+hit_impulse		 			= 140		; size of physic impulse by bullet	
+hit_type 					= fire_wound 	; [] type of the wound
 fire_distance            	= 1000		; ƒальность прицельной стрельбы
 bullet_speed				= 910		; Ќачальна€ скорость пули
-rpm                      	= 600		; —корострельность
+rpm                      	= 750		; —корострельность
 
 use_aim_bullet				= true		;ѕоддерживаетс€ ли перва€ суппер пул€
 time_to_aim					= 1.0	
@@ -120,7 +120,7 @@ silencer_hit_impulse	 	= 120
 silencer_fire_distance   	= 250
 silencer_bullet_speed	 	= 600
 
-hud                      	= wpn_ak74_hud				; name of the section of the hud
+hud                      	= wpn_ak74m_hud				; name of the section of the hud
 
 position         	        = -0.026,-0.172,0			; position (offset) and orientation of the weapon in the hands of character
 orientation      	        = 0,0,0						; (3rd person view)
@@ -189,7 +189,7 @@ silencer_light_time 		= 0.2
 ;-- HUD DESCRIPTION
 ;-----------------------------------------------------------------------------
  
-[wpn_ak74_hud]
+[wpn_ak74m_hud]
 allow_inertion				= true
 
 ;similar to corresponding params in weapon section but for 1st person view
@@ -260,4 +260,3 @@ grenade_normal_zoom_rotate_y		= 0.017200
 grenade_zoom_offset			= -0.039600,-0.433100,0.000000
 grenade_zoom_rotate_x		= -0.538700
 grenade_zoom_rotate_y		= -0.033800
-
